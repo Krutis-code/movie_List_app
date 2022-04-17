@@ -13,3 +13,6 @@ export const movieSlice = createSlice({
         },
     },
 });
+
+export const {addMovies} = movieSlice.addMovies;
+export const getAllMovies = (state) => state.movies.movies.search
