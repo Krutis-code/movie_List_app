@@ -5,21 +5,18 @@ export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', asyn
     const res = await MovieApi.get(`/?apiKey=${APIKEY}&s=${'Harry'}&type=movie`).catch((err) => {
         console.log('error', err);
     });
-    console.log('res moviessszzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz', res.data.Search);
     return res.data;
 });
 export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async () => {
     const res = await MovieApi.get(`/?apiKey=${APIKEY}&s=${'friends'}&type=series`).catch((err) => {
         console.log('error', err);
     });
-    console.log('res moviessszzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz', res.data.Search);
     return res.data;
 });
 export const fetchAsyncMovieOrShowDetail = createAsyncThunk('movies/fetchAsyncMovieOrShowDetail', async (id) => {
     const res = await MovieApi.get(`/?apiKey=${APIKEY}&i=${id}&Plot=full`).catch((err) => {
         console.log('error', err);
     });
-    console.log('res moviessszzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz', res.data);
     return res.data;
 });
 
