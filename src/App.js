@@ -9,7 +9,7 @@ import Footer from './components/Footer/Footer';
 function App() {
     return (
         <div className="App">
-            <Router>
+            <Router basename="/movie_List_app/">
                 <Header></Header>
                 <div className="container">
                     <Routes>
